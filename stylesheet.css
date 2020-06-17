@@ -1,0 +1,345 @@
+* {
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    background-image: url(screenshots/background6.jpg);
+    background-repeat: no-repeat;
+	background-size: cover;
+    background-position: center;
+    margin: auto;
+}
+
+.mainContainer {
+    width: 90%;
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". infoContainer . . portfolioContainer portfolioContainer .";
+    margin-top: 5%;
+    margin-right: auto;
+}
+
+#pills-home, #pills-profile, #pills-contact  {
+    min-height: 432px;
+}
+
+.portfolioContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+            " . . . itemA"
+            " . itemB itemC itemC"
+            " itemD itemD itemC itemC"
+            " itemD itemD itemE itemF"
+            " itemG itemH itemH ."
+            " . itemH itemH .";
+    column-gap: 0.2em;
+    row-gap: 0.2em;
+	height: 25rem;
+	width: 30rem;
+    grid-area: portfolioContainer;
+	justify-self: stretch;
+	transform: rotate(45deg);
+}
+
+.infoContainer {
+    grid-area: infoContainer;
+    align-self: stretch;
+    margin-top: 3em;
+    min-width: 20em;
+}
+
+h1, h2{
+    margin: 0;
+    color: #ffffff;
+}
+
+h1 {
+    font-weight: bold;
+}
+
+
+.nav {
+    flex-wrap: nowrap;
+}
+
+.nav-link {
+    background-color: transparent;
+    padding: 0.3rem 1.1rem 0.5rem 0.3rem;
+}
+
+.nav-link.active{
+    background-color: transparent;
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.nav-link.hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#pills-home-tab, #pills-profile-tab, #pills-contact-tab {
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.tab-content {
+    color: #ffffff;
+    text-align: justify;
+}
+
+.bioButton {
+    text-decoration: underline;
+}
+
+.socialMediaButtons a{
+    color: #ffffff;
+    font-size: 1.5em;
+}
+
+.socialMediaButtons a:hover, 
+.socialMediaButtons a:active {
+	color: #000000;
+	cursor: pointer;
+}
+
+.bioContainer {
+    width: 20em;
+}
+
+.portItem {
+    border: 0.1em solid #ffffff;
+    height: 6.9rem;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+    transition: all 1s ease-in-out;
+}
+
+.portItem:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.portItem:hover .portItemImageA {
+    display: inline;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageB {
+    display: inline;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageC {
+    display: inline;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageD {
+    display: inline;
+    cursor: pointer;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageE {
+    display: inline;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageF {
+    display: inline;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageG {
+    display: inline;
+    opacity: 1;
+}
+
+.portItem:hover .portItemImageH {
+    display: inline;
+    opacity: 1;
+}
+
+.itemA, .itemB, .itemC, .itemD, .itemE, .itemF, .itemG, .itemH {
+    align-self: stretch;
+}
+
+.portItemImageA, .portItemImageB, .portItemImageC, .portItemImageD, .portItemImageE, .portItemImageF, .portItemImageG, .portItemImageH {
+    height: 6.9rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-45deg);
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    top: -50%;
+    left: -50%;
+    z-index: -1;
+    color: #ffffff;
+    opacity: 0;
+    transition: all 1s ease-in-out;
+}
+
+.itemA {
+    grid-area: itemA;
+}
+
+.portItemImageA {
+    color: #ffffff;
+    background-image: url(screenshots/placeholder.jpeg);
+}
+
+.itemB {
+    grid-area: itemB;
+}
+
+.portItemImageB {
+    background-image: url(screenshots/placeholder.jpeg);
+}
+
+.itemC {
+    grid-area: itemC;
+    height: 13.5rem;
+}
+
+.portItemImageC {
+    background-image: url(screenshots/nakedmoleflats.png);
+}
+
+.itemD {
+    grid-area: itemD;
+    height: 13.5rem;
+}
+
+.portItemImageD {
+    background-image: url(screenshots/cardgame.png);
+}
+
+.itemE {
+    grid-area: itemE;
+}
+
+.portItemImageE {
+    background-image: url(screenshots/placeholder.jpeg);
+}
+
+.itemF {
+    grid-area: itemF;
+}
+
+.portItemImageF {
+    background-image: url(screenshots/placeholder.jpeg);
+}
+
+.itemG {
+    grid-area: itemG;
+}
+
+.portItemImageG {
+    background-image: url(screenshots/placeholder.jpeg);
+}
+
+.itemH {
+    grid-area: itemH;
+    height: 13.5rem;
+}
+
+.portItemImageH {
+    background-image: url(screenshots/placeholder.jpeg);
+}
+
+@media screen and (max-width: 1023px) {
+
+    body {
+        background-size: auto;
+        margin: auto;
+        text-align: center;
+        align-content: center;
+        max-width: 90%;
+    }
+
+    .infoContainer {
+        margin: 1.5em auto;
+        height: 23em;
+    }
+
+    #pills-home, #pills-profile, #pills-contact  {
+        min-height: 432px;
+        width: 90%;
+    }
+    .nav {
+        margin: auto;
+        padding-left: 2em;
+        padding-top: 2em;
+        align-content: center;
+    }
+
+    .tab-content {
+        margin-bottom: 5em;
+        padding-left: 2em;
+    }
+
+	.mainContainer {
+        display: inline;
+    }
+
+    .portfolioContainer {
+        position: relative;
+        left: 25%;
+    }
+
+}
+
+@media screen and (max-width: 776px) {
+    body {
+        height: 95em;
+    }
+
+    .infoContainer {
+        margin: 3em auto;
+        height: 32em;
+        padding-left: 0.8em;
+        width: 100%;
+    }
+
+    .portfolioContainer {
+        transform: rotate(0deg);
+        width: 90%;
+        grid-template-areas: 
+            " itemA itemA itemB itemB"
+            " itemC itemC itemC itemC"
+            " itemD itemD itemD itemD"
+            " itemE itemE itemF itemF"
+            " itemH itemH itemH itemH"
+            " itemG itemG itemG itemG";
+        margin: auto;
+        left: 0;
+    }
+
+    .portItemImageA, .portItemImageB, .portItemImageC, .portItemImageD, .portItemImageE, .portItemImageF, .portItemImageG, .portItemImageH {
+        transform: rotate(0deg)
+    }
+
+    .itemG {
+        grid-area: itemG;
+        height: 7rem;
+    }
+
+    footer {
+        height: 5em;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 655px) {
+    .infoContainer {
+        height: 32em;
+    }
+}
